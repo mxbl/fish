@@ -1,6 +1,3 @@
-
-### / Git functions /
-
 function git_branch_name --description "Print the currents branch name"
   printf '%s' (git symbolic-ref HEAD 2>/dev/null | sed -e 's|^refs/heads/||')
 end
@@ -91,6 +88,10 @@ function current_working_directory
   end
 end
 
+function hostname_prompt
+	printf '%s%s.%s: ' (set_color -o ff8800) (hostname) (string split -f1 . (dnsdomainname))
+end
+
 ### / Main prompt function /
 
 function fish_prompt --description 'Write out the prompt'
@@ -99,7 +100,7 @@ function fish_prompt --description 'Write out the prompt'
   if [ (git_branch_name) ]
       printf '\n'
   else
-      printf '%s%s: ' (set_color -o ff8800)(hostname)
+      hostname_prompt
   end
 
   # current working directory
@@ -126,11 +127,6 @@ end
 ### / Right prompt /
 
 function fish_right_prompt
-  #printf "%s❮%s " (set_color -o cyan) (set_color normal)
-  #if test (tput cols) -ge 80
-  #  printf '%s' (set_color 444444)
-  #  printf '%s ❮' (history -1)
-  #end
 end
 
 ### / Vi mode prompt /

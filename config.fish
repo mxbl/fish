@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set FISHDIR $HOME/.config/fish
 set fish_greeting
 set -x PATH \
 	$HOME/bin \
@@ -18,5 +19,5 @@ end
 
 which zoxide > /dev/null; and zoxide init fish |.
 
-. ./prompt.fish
-. ./aliases.fish
+. $FISHDIR/prompt.fish
+. $FISHDIR/aliases.fish
