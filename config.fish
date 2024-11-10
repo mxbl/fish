@@ -6,6 +6,7 @@ set FISHDIR $HOME/.config/fish
 set fish_greeting
 set -x PATH \
 	$HOME/bin \
+	$HOME/.cargo/bin \
 	/usr/local/go/bin \
 	/usr/local/bin \
 	/usr/bin \
