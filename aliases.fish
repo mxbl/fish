@@ -1,0 +1,7 @@
+alias l  'eza'
+alias ll 'eza -lghB --git'
+alias la 'eza -lghBa --git'
+alias lt 'eza -lghB --git --tree'
+alias df 'df -h'
+alias du 'du -h'
+alias ip 'ip --color'
