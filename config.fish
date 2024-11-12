@@ -7,6 +7,7 @@ set fish_greeting
 set -x PATH \
 	$HOME/bin \
 	$HOME/.cargo/bin \
+	$HOME/.nix-profile/bin \
 	/usr/local/go/bin \
 	/usr/local/bin \
 	/usr/bin \
@@ -22,3 +23,6 @@ which zoxide > /dev/null; and zoxide init fish |.
 
 . $FISHDIR/prompt.fish
 . $FISHDIR/aliases.fish
+
+bind \cy accept-autosuggestion
+
