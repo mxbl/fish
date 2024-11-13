@@ -20,6 +20,7 @@ if not set -q SSH_CLIENT; and not set -q SSH_CONNECTION
 end
 
 which zoxide > /dev/null; and zoxide init fish |.
+which atuin > /dev/null; and atuin init fish |.
 
 . $FISHDIR/prompt.fish
 . $FISHDIR/aliases.fish
