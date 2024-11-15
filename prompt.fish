@@ -89,7 +89,7 @@ function current_working_directory
 end
 
 function hostname_prompt
-	printf '%s%s.%s ' (set_color -o ff8800) (hostname) (string split -f1 . (dnsdomainname))
+	printf '%s%s.%s%s ' (set_color -o ff8800) (hostname) (set_color -o b35f00) (string split -f1 . (dnsdomainname))
 end
 
 ### / Main prompt function /
