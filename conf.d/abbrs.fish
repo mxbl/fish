@@ -1,9 +1,10 @@
 abbr -a sc source ~/.config/fish/config.fish
 abbr -a mv mv -iv
 abbr -a cp cp -riv
+abbr -a rm rm -Iv
 abbr -a du du -h
 abbr -a df df -h
-abbr -a gp   --set-cursor git push % (git_branch_name)
+abbr -a gp   --set-cursor "git push % (git_branch_name)"
 abbr -a add. --set-cursor "git add . && git commit -m '%' && git push origin (git_branch_name)"
 
 abbr -a tm tmux
