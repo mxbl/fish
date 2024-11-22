@@ -13,7 +13,7 @@ set -x PATH \
 	/usr/bin \
 	/usr/sbin
 
-if not test $XDG_SESSION_TYPE = tty
+if set -q XDG_SESSION_TYPE; and not test $XDG_SESSION_TYPE = tty
 	setxkbmap -option 'shift:both_capslock'
 	xset r rate 200
 	xset b off
