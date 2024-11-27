@@ -3,14 +3,15 @@ abbr -a mv mv -iv
 abbr -a cp cp -riv
 abbr -a rm rm -Iv
 abbr -a du du -h
+abbr -a dum du -h --max-depth=
 abbr -a df df -h
 abbr -a gp   --set-cursor "git push % (git_branch_name)"
-abbr -a add. --set-cursor "git add . && git commit -m '%' && git push origin (git_branch_name)"
+abbr -a update --set-cursor "git add . && git commit -m '%' && git push origin (git_branch_name)"
 
 abbr -a tm tmux
 abbr -a ta tmux attach -t
 abbr -a tad tmux attach -d -t
-abbr -a ts tmux new-session -s
+abbr -a tn tmux new-session -s
 abbr -a tl tmux list-sessions
 
 abbr -a sys systemctl
@@ -30,3 +31,7 @@ end
 
 abbr -a !! --function histreplace --position anywhere
 abbr -a '!$' --function histreplace --position anywhere
+
+# ansible-vault
+abbr -a enc ansible-vault encrypt
+abbr -a dec ansible-vault decrypt

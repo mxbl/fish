@@ -1,11 +1,14 @@
 . (dirname (status --current-filename))/git.fish
 
+set -l turquoise (set_color 5fdfff)
+set -l purple (set_color af5fff)
+set -l green (set_color 87ff00)
+
 set -g fish_color_cwd white
 set -g fish_color_user white
 set -g fish_color_user_root red
 
-function current_working_directory
-	# Calculate the current working directory dependent on the git base directory
+function current_working_directory --description "cwd dependent on the git root"
 	if [ (git_branch_name) ]
 		set -l this_dir (pwd)
 
@@ -34,7 +37,6 @@ function fish_prompt --description 'Write out the prompt'
 
 	fish_is_root_user; and set delim '# '
 	fish_is_root_user; and set usercolor (set_color -o $fish_color_user_root)
-
 
 	# Show username and hostname prompt only when coming through SSH
 	# or as root user

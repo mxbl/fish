@@ -7,7 +7,6 @@ set -x PATH \
 	$HOME/bin \
 	$HOME/.cargo/bin \
 	$HOME/.nix-profile/bin \
-	/nix/var/nix/profiles/default/bin \
 	/usr/local/go/bin \
 	/usr/local/bin \
 	/usr/bin \
@@ -21,5 +20,3 @@ end
 
 which zoxide > /dev/null; and zoxide init fish |.
 which atuin > /dev/null; and atuin init fish |.
-
-bind \cy accept-autosuggestion

@@ -21,37 +21,38 @@ function git_status
 		return
 	end
 
+	set -l git_state ""
 	set -l git_status ""
 	if [ (git_is_dirty) ]
 		switch (git branch -qv --no-color)
 			case "*[ahead *"
-				set git_status $git_status⬆
+				set git_state ⬆
 			case "*behind *"
-				set git_status $git_status⬇
+				set git_state ⬇
 		end
 
 		for i in (git status --porcelain | cut -c 1-2 | sort | uniq)
 			switch $i
-				case "."
+				case "A "
 					set git_status $git_status✚
 				case " D"
 					set git_status $git_status✖
 				case "*M*"
-					set git_status $git_status▲
+					set git_status $git_status✱
 				case "*R*"
 					set git_status $git_status➜
 				case "*U*"
 					set git_status $git_status═
 				case "??"
-					set git_status $git_status≠
+					set git_status $git_status.
 			end
 		end
+	else
+		set git_status ✔
 	end
 
-	echo -n -s $git_status:(set_color -o purple)$git_branch(set_color normal):
-
-	# commit hash
-	printf '%s%s' (set_color ff8800)(git_commit_hash)
+	echo -n -s $git_status:(set_color -o purple)$git_branch$git_state(set_color normal):
+	echo -n -s (set_color -o ff8800)(git_commit_hash)
 
 	# commit message
 	if test (tput cols) -ge 50
