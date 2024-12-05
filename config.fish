@@ -5,6 +5,7 @@ end
 set fish_greeting
 set -x PATH \
 	$HOME/bin \
+	$HOME/go/bin \
 	$HOME/.cargo/bin \
 	$HOME/.nix-profile/bin \
 	/usr/local/go/bin \
@@ -18,5 +19,5 @@ if set -q XDG_SESSION_TYPE; and not test $XDG_SESSION_TYPE = tty
 	xset b off
 end
 
-which zoxide > /dev/null; and zoxide init fish |.
-which atuin > /dev/null; and atuin init fish |.
+which zoxide &> /dev/null; and zoxide init fish |.
+which atuin &> /dev/null; and atuin init fish |.
