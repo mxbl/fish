@@ -8,6 +8,9 @@ set -x PATH \
 	$HOME/go/bin \
 	$HOME/.cargo/bin \
 	$HOME/.nix-profile/bin \
+	/run/wrappers/bin \
+	/run/current-system/sw/bin \
+	/etc/profiles/per-user/mx/bin \
 	/usr/local/go/bin \
 	/usr/local/bin \
 	/usr/bin \
