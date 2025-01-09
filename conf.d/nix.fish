@@ -1,4 +1,7 @@
 ## Nix
-#if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
-#  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
-#end
+if test -e /run/current-system/sw/etc/profile.d/nix.fish
+  . /run/current-system/sw/etc/profile.d/nix.fish
+end
+if test -e /run/current-system/sw/etc/profile.d/nix-daemon.fish
+  . /run/current-system/sw/etc/profile.d/nix-daemon.fish
+end
