@@ -16,7 +16,7 @@ set -x PATH \
 	/usr/bin \
 	/usr/sbin
 
-if set -q XDG_SESSION_TYPE; and not test $XDG_SESSION_TYPE = tty
+if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'
 	xset r rate 200
 	xset b off
