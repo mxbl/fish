@@ -24,7 +24,7 @@ function git_status
 	set -l git_state ""
 	set -l git_status ""
 	if [ (git_is_dirty) ]
-		switch (git branch -qv --no-color)
+		switch (git branch -qv --no-color | grep "^\*")
 			case "*[ahead *"
 				set git_state ⬆
 			case "*behind *"
