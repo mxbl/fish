@@ -23,7 +23,12 @@ function tmux_sessionizer
 
 	set -l selected (find $dirs -mindepth 1 -maxdepth 1 -type d | fzf)
 	if test -z $selected; return; end
+
+	# Replace . for hidden directories with _
 	set -l selected_name (basename $selected)
+	if string match -rq "^\." $selected_name
+		set selected_name (string replace -r "^\." "_" $selected_name)
+	end
 
 	if not tmux has-session -t=$selected_name 2>/dev/zero
 		tmux new-session -ds $selected_name -c $selected
