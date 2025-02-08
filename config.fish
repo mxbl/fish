@@ -2,6 +2,7 @@ if not status is-interactive
 	exit
 end
 
+set EDITOR nvim
 set fish_greeting
 set -x PATH \
 	$HOME/bin \

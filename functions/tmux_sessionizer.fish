@@ -1,9 +1,9 @@
 set -x dirs \
-	~/ \
 	~/.config \
 	~/git \
 	~/dev \
-	~/devOps
+	~/git \
+	~/notes
 
 function tmux_sessionizer
 	#function dot_tmux -d "Source this projects or a global tmux session config"
