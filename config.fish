@@ -22,5 +22,5 @@ if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	xset b off
 end
 
-which zoxide &> /dev/null; and zoxide init fish |.
-which atuin &> /dev/null; and atuin init fish |.
+command -sq zoxide; and zoxide init fish |.
+command -sq atuin; and atuin init fish |.
