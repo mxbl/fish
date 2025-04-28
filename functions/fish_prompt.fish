@@ -13,7 +13,7 @@ function current_working_directory --description "cwd dependent on the git root"
 		set -l this_dir (pwd)
 
 		# equals "" in case of a bare repo
-		set -l git_dir (git rev-parse --show-toplevel)
+		set -l git_dir (git rev-parse --show-toplevel 2>/dev/null)
 		if not test -n "$git_dir"
 			set git_dir (git rev-parse --git-dir)
 		end

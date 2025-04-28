@@ -31,7 +31,7 @@ function git_status
 				set git_state ⬇
 		end
 
-		for i in (git status --porcelain | cut -c 1-2 | sort | uniq)
+		for i in (git status --porcelain 2>/dev/null | cut -c 1-2 | sort | uniq)
 			switch $i
 				case "A "
 					set git_status $git_status✚
@@ -58,7 +58,7 @@ function git_status
 	if test (tput cols) -ge 50
 		set msg_len \
 			(math (tput cols) - (string length (current_working_directory)) - 25)
-		echo -n -s (set_color 444444)/(git_commit_message $msg_len).../
+		echo -n -s (set_color 444444)\<(git_commit_message $msg_len)...\>
 	end
 
 	echo -n -s (set_color normal)\n
