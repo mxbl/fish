@@ -2,7 +2,7 @@ abbr -a sc source ~/.config/fish/config.fish
 abbr -a mv mv -iv
 abbr -a cp cp -riv
 abbr -a rm rm -Iv
-abbr -a du du -h
+abbr -a du du -csh
 abbr -a dm --set-cursor du -h --max-depth=%
 abbr -a df df -h
 abbr -a gp   --set-cursor "git push % (git_branch_name)"
