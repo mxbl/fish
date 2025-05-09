@@ -4,18 +4,6 @@ end
 
 set EDITOR nvim
 set fish_greeting
-set -x PATH \
-	$HOME/bin \
-	$HOME/go/bin \
-	$HOME/.cargo/bin \
-	$HOME/.nix-profile/bin \
-	/run/wrappers/bin \
-	/run/current-system/sw/bin \
-	/etc/profiles/per-user/mx/bin \
-	/usr/local/go/bin \
-	/usr/local/bin \
-	/usr/bin \
-	/usr/sbin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'

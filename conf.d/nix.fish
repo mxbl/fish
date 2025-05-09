@@ -1,4 +1,4 @@
-## Nix
+# Nix
 if test -e /run/current-system/sw/etc/profile.d/nix.fish
   . /run/current-system/sw/etc/profile.d/nix.fish
 end
