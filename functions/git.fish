@@ -12,7 +12,7 @@ end
 
 function git_commit_message
 	set msg (git log -1 --pretty=%B 2>/dev/null | head -n1)
-	string sub -l $argv[1] $msg
+	string sub -l $argv[1] -- $msg
 end
 
 function git_status
