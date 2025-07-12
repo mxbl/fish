@@ -15,6 +15,11 @@ if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	xset b off
 end
 
-command -sq direnv; and direnv hook fish |.
+# set -g direnv_fish_mode eval_on_arrow
+
+if command -sq direnv
+	direnv hook fish |.
+	direnv export fish |.
+end
 command -sq zoxide; and zoxide init fish |.
 command -sq atuin; and atuin init fish |.
