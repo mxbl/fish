@@ -4,6 +4,10 @@ end
 
 set EDITOR nvim
 set fish_greeting
+set -x SSH_AUTH_SOCK /run/user/(id -u)/openssh_agent
+
+fish_add_path $HOME/.local/bin
+fish_add_path /usr/local/go/bin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'
@@ -11,5 +15,6 @@ if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	xset b off
 end
 
+command -sq direnv; and direnv hook fish |.
 command -sq zoxide; and zoxide init fish |.
 command -sq atuin; and atuin init fish |.
