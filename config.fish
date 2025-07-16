@@ -11,7 +11,7 @@ fish_add_path /usr/local/go/bin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'
-	xset r rate 200
+	xset r rate 250
 	xset b off
 end
 

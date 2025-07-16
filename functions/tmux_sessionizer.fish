@@ -1,28 +1,15 @@
 set -x dirs \
 	~ \
-	~/.config \
 	~/dev \
 	~/dev_local \
 	~/git \
+	~/.config \
 	~/notes
 
 function tmux_sessionizer
-	#function dot_tmux -d "Source this projects or a global tmux session config"
-	#	if test -f ./.tm
-	#		. ./.tm
-	#	else
-	#		. ~/.tm
-	#	end
-	#	functions -e dot_tmux
-	#end
-	#
-	#if test (count $argv) -gt 0
-	#	dot_tmux
-	#	clear
-	#	return
-	#end
+	set -l selected (find $dirs -mindepth 1 -maxdepth 1 -type d \
+		! -path "*/.ansible" ! -path "*.OLD" | fzf)
 
-	set -l selected (find $dirs -mindepth 1 -maxdepth 1 -type d | fzf)
 	if test -z $selected; return; end
 
 	# Replace . for hidden directories with _
