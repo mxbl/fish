@@ -2,9 +2,9 @@ if not status is-interactive
 	exit
 end
 
-set EDITOR nvim
 set fish_greeting
-set -x SSH_AUTH_SOCK /run/user/(id -u)/openssh_agent
+set -x EDITOR nvim
+set -x SSH_AUTH_SOCK /run/user/(id -u)/ssh-agent
 
 fish_add_path $HOME/.local/bin
 fish_add_path /usr/local/go/bin
