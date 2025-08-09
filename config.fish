@@ -7,7 +7,7 @@ set -x EDITOR nvim
 set -x SSH_AUTH_SOCK /run/user/(id -u)/ssh-agent
 
 fish_add_path $HOME/.local/bin
-fish_add_path /usr/local/go/bin
+# fish_add_path /usr/local/go/bin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'
