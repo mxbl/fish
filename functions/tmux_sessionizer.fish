@@ -14,7 +14,7 @@ function tmux_sessionizer
 	# Replace . for hidden directories with _
 	set -l selected_name (basename $selected)
 	if string match -rq "\." $selected_name
-		set selected_name (string replace -a "\." "_" $selected_name)
+		set selected_name (string replace -ra "\." "_" $selected_name)
 	end
 
 	if not tmux has-session -t=$selected_name 2>/dev/zero
