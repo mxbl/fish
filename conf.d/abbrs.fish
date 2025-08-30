@@ -14,6 +14,9 @@ abbr -a tad tmux attach -d -t
 abbr -a tn tmux new-session -s
 abbr -a tl tmux list-sessions
 
+abbr -a d docker
+abbr -a tf terraform
+
 abbr -a sy systemctl
 
 function histreplace
@@ -33,5 +36,6 @@ abbr -a !! --function histreplace --position anywhere
 abbr -a '!$' --function histreplace --position anywhere
 
 # ansible-vault
+abbr -a av ansible-vault
 abbr -a enc ansible-vault encrypt
 abbr -a dec ansible-vault decrypt
