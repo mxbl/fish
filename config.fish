@@ -23,3 +23,4 @@ if command -sq direnv
 end
 command -sq zoxide; and zoxide init fish |.
 command -sq atuin; and atuin init fish |.
+command -sq mise; and mise activate fish |.
