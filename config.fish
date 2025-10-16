@@ -4,7 +4,23 @@ end
 
 set fish_greeting
 set -x EDITOR nvim
-set -x SSH_AUTH_SOCK /run/user/(id -u)/ssh-agent
+
+# SSH agent socket discovery
+begin
+	set -l base /run/user/(id -u)
+	set -l sockets \
+		$base/keyring/ssh \
+		$base/ssh-agent \
+		$base/openssh_agent
+
+	for sock in $sockets
+		if test -S $sock
+			set -x SSH_AUTH_SOCK $sock
+			break
+		end
+	end
+	set -q SSH_AUTH_SOCK; or echo "[ERR] Could not find a valid SSH_AUTH_SOCK"
+end
 
 fish_add_path $HOME/.local/bin
 # fish_add_path /usr/local/go/bin
