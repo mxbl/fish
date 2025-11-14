@@ -23,7 +23,6 @@ begin
 end
 
 fish_add_path $HOME/.local/bin
-# fish_add_path /usr/local/go/bin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'

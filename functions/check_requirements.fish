@@ -10,7 +10,7 @@ function check_requirements --argument cmds -d "Check a list of commands to be a
 
 	for cmd in $requirements
 		if not command -sq $cmd
-			echo "missing -> $cmd" >/dev/stderr
+			printf "[ERR] %s`%s` is missing%s\n" (set_color red) $cmd (set_color normal) >/dev/stderr
 			set __status 1
 		end
 	end

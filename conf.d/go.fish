@@ -1,4 +1,5 @@
-fish_add_path /usr/local/go/bin
-fish_add_path ~/go/bin
+set -x GOPATH $HOME/go
+set -x GOBIN  $GOPATH/bin
 
-set -x GOBIN $HOME/go/bin
+fish_add_path /usr/local/go/bin
+fish_add_path $GOBIN
