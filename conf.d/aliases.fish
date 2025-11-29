@@ -7,7 +7,8 @@ alias du 'du -h'
 alias ip 'ip --color'
 alias i3lock 'i3lock -c 000000'
 alias swapcaps 'setxkbmap -option "ctrl:swapcaps"'
-alias m 'make'
+alias m 'mise'
+alias mr 'mise run'
 
 # Git
 alias wt 'git worktree'
