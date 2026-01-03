@@ -10,5 +10,8 @@ alias swapcaps 'setxkbmap -option "ctrl:swapcaps"'
 alias m 'mise'
 alias mr 'mise run'
 
+#alias t 'terraform'
+alias p 'pulumi'
+
 # Git
 alias wt 'git worktree'

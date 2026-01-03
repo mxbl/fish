@@ -15,7 +15,9 @@ abbr -a tn tmux new-session -s
 abbr -a tl tmux list-sessions
 
 abbr -a d docker
-abbr -a tf terraform
+abbr -a t terraform
+
+abbr -a tf --set-cursor "terraform % -var-file=./.tfvars/(terraform workspace show).net.tfvars"
 
 abbr -a sy systemctl
 
