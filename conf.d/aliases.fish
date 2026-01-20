@@ -9,9 +9,11 @@ alias i3lock 'i3lock -c 000000'
 alias swapcaps 'setxkbmap -option "ctrl:swapcaps"'
 alias m 'mise'
 alias mr 'mise run'
+alias n 'nnn'
 
-#alias t 'terraform'
-alias p 'pulumi'
+alias d 'docker'
+alias t 'terraform'
+alias p 'packer'
 
 # Git
 alias wt 'git worktree'

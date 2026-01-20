@@ -14,10 +14,11 @@ abbr -a tad tmux attach -d -t
 abbr -a tn tmux new-session -s
 abbr -a tl tmux list-sessions
 
-abbr -a d docker
-abbr -a t terraform
+# abbr -a d docker
+# abbr -a t terraform
 
-abbr -a tf --set-cursor "terraform % -var-file=./.tfvars/(terraform workspace show).net.tfvars"
+abbr -a tf --set-cursor "t % -var-file=./.tfvars/(terraform workspace show).tfvars"
+abbr -a pb --set-cursor "p build -var-file=pkrvars/%.pkrvar.hcl ."
 
 abbr -a sy systemctl
 
