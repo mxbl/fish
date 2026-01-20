@@ -22,6 +22,7 @@ begin
 	set -q SSH_AUTH_SOCK; or echo "[ERR] Could not find a valid SSH_AUTH_SOCK"
 end
 
+set -e fish_user_paths
 fish_add_path $HOME/.local/bin
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
