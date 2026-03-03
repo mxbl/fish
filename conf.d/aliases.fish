@@ -11,9 +11,11 @@ alias m 'mise'
 alias mr 'mise run'
 alias n 'nnn'
 
-alias d 'docker'
-alias t 'terraform'
-alias p 'packer'
+alias d  'docker'
+alias t  'terraform'
+alias tg 'terragrunt'
+alias p  'packer'
+alias y  'yazi'
 
 # Git
 alias wt 'git worktree'
