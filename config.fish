@@ -2,6 +2,8 @@ if not status is-interactive
 	exit
 end
 
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
 set fish_greeting
 set -x EDITOR nvim
 
@@ -11,6 +13,7 @@ begin
 	set -l sockets \
 		$base/keyring/ssh \
 		$base/ssh-agent \
+		$base/ssh-agent.socket \
 		$base/openssh_agent
 
 	for sock in $sockets
