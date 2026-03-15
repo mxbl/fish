@@ -22,5 +22,5 @@ function mx --description 'Install/configure DEV environment tools'
 	git config --global alias.st status
 	git config --global alias.wt worktree
 	git config --global alias.ls "log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate"
-    git config --global alias.yolo "!git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\""
+	git config --global alias.yolo "!git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\""
 end

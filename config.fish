@@ -24,6 +24,7 @@ end
 
 set -e fish_user_paths
 fish_add_path $HOME/.local/bin
+fish_add_path $GOBIN
 
 if set -q XDG_SESSION_TYPE; and test $XDG_SESSION_TYPE = x11
 	setxkbmap -option 'shift:both_capslock'
