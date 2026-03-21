@@ -42,3 +42,6 @@ abbr -a '!$' --function histreplace --position anywhere
 abbr -a av ansible-vault
 abbr -a enc ansible-vault encrypt
 abbr -a dec ansible-vault decrypt
+
+# Generate random password
+abbr pass "tr -dc 'A-Za-z0-9!?%=' < /dev/urandom | head -c 16"
