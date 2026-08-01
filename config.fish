@@ -8,8 +8,9 @@ test -f $cachyos_config; and . $cachyos_config
 set fish_greeting
 set -x EDITOR nvim
 
-# SSH agent socket discovery
-begin
+# SSH agent socket discovery (when not on remote)
+if not set -q SSH_CLIENT
+	echo $SSH_AUTH_SOCK
 	set -l base /run/user/(id -u)
 	set -l sockets \
 		$base/keyring/ssh \
