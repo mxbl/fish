@@ -9,7 +9,7 @@ function mx --description 'Install/configure DEV environment tools'
 	set -l MISE_INSTALL_PATH $HOME/.local/bin/mise
 	command -sq mise; \
 		or curl https://mise.run | sh
-	MISE_INSTALL_PATH activate fish |.
+	$MISE_INSTALL_PATH activate fish |.
 
 	mise use -g eza
 	mise use -g zoxide
