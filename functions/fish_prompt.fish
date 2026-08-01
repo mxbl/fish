@@ -44,8 +44,7 @@ function fish_prompt --description 'Write out the prompt'
 		set -g prompt_host ""
 		if set -q SSH_TTY; or fish_is_root_user
 			set prompt_host \
-				$usercolor$USER$normal@ \
-				(set_color $fish_color_host)(hostname)"."(string split -f1 . (dnsdomainname))" "
+				$usercolor$USER$normal(set_color 7d7d7d)" @("(hostname)") "$normal
 		end
 	end
 
