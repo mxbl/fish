@@ -2,7 +2,8 @@ if not status is-interactive
 	exit
 end
 
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+set -l cachyos_config /usr/share/cachyos-fish-config/cachyos-config.fish
+test -f $cachyos_config; and . $cachyos_config
 
 set fish_greeting
 set -x EDITOR nvim
