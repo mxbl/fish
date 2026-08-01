@@ -9,6 +9,7 @@ set fish_greeting
 set -x EDITOR nvim
 
 # SSH agent socket discovery (when not on remote)
+# TODO: do we need this anyways?
 if not set -q SSH_CLIENT
 	echo $SSH_AUTH_SOCK
 	set -l base /run/user/(id -u)
