@@ -1,6 +1,7 @@
 set -x dirs \
 	~ \
 	~/dev \
+	~/test \
 	~/git \
 	~/.config \
 	~/notes

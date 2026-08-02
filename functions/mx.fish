@@ -29,4 +29,11 @@ function mx --description 'Install/configure DEV environment tools'
 	git config --global alias.yolo "!git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\""
 
 	git clone git@github.com:mxbl/nvim.git ~/.config/nvim 2>/dev/null
+
+	if check_requirements tmux
+		ln -s $HOME/.config/fish/conf.d/tmux.conf $HOME/.tmux.conf
+		ln -s $HOME/.config/fish/conf.d/tmux.vim-select-pane.sh $HOME/.tmux.vim-select-pane.sh
+	else
+		echo "mx> NO TMUX FOUND - skipping configs.."
+	end
 end
