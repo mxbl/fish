@@ -1,6 +1,6 @@
 
 # NOTE: Tools i usally use that could be added here:
-#   (mise) ripgrep, atuin, direnv, fzf, btop
+#   (mise) [x] ripgrep, atuin, direnv, [x] fzf, btop, tmux
 
 function mx --description 'Install/configure DEV environment tools'
 	check_requirements curl git cmake tar unzip; or return 1
@@ -16,6 +16,8 @@ function mx --description 'Install/configure DEV environment tools'
 	mise use -g neovim
 	mise use -g node
 	mise use -g go
+	mise use -g ripgrep
+	mise use -g fzf
 
 	fish_add_path $HOME/.local/share/mise/installs/go/latest/bin/
 	go install golang.org/x/tools/cmd/goimports@latest
