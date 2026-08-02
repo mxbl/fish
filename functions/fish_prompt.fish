@@ -3,6 +3,7 @@
 set -l turquoise (set_color 5fdfff)
 set -l purple (set_color af5fff)
 set -l green (set_color 87ff00)
+# set -l yellow (set_color ffffc5)
 
 set -g fish_color_cwd white
 set -g fish_color_user white
@@ -55,7 +56,11 @@ function fish_prompt --description 'Write out the prompt'
 		echo -n -s $prompt_host
 	end
 
+
 	echo -n -s (set_color -o $fish_color_cwd)(current_working_directory)$normal" "
+	if set -q ENV
+		echo -n (set_color ffffc5)ENV=$ENV$normal" "
+	end
 	git_status
 
 	test $last_status -ne 0; and \
